@@ -14,11 +14,11 @@ for (const k in envConfig) {
 
 const config: DataSourceOptions = {
   type: 'postgres',
-  host: process.env.DB_HOST || 'localhost',
+  host: process.env.DB_HOST || 'gerocuidado-saude-db',
   port: process.env.DB_PORT ? +process.env.DB_PORT : 5003,
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASS || 'postgres',
-  database: process.env.DB_DATABASE || 'localhost',
+  database: process.env.DB_DATABASE || 'gerocuidado-saude-db',
   migrationsTableName: 'migrations',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
